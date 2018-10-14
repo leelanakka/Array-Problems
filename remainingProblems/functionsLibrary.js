@@ -4,13 +4,15 @@
 //zip(a,b) => [[1,4],[2,5],[3,6]]
 
 
-
-
-const insertElements = function(arrayA,arrayB){
+const insertElementsZip = function(arrayA,arrayB){
   let finalArray = [];
-  for(let index=0; index < arrayA.length ; index++){
+  let count = arrayA.length;
+  if(count>arrayB.length){
+    count = arrayB.length;
+  }
+  for(let index=0; index < count ; index++){
     finalArray.push([arrayA[index],arrayB[index]])
   }
   return finalArray;
-  }
-exports.insertElements = insertElements;
+}
+exports.insertElementsZip = insertElementsZip;
