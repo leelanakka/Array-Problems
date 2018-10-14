@@ -6,3 +6,4 @@ assert.deepEqual(result([11,22,23,34]),[11,23])
 assert.deepEqual(result([11,22,23,34,"a"]),[11,23])
 
 assert.deepEqual(result(["a","b","c"]),[])
+assert.deepEqual(result(["leela"]),[])
