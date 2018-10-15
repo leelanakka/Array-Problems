@@ -1,4 +1,5 @@
-const insertElements = require('./functionsLibrary.js').insertElementsZip;
+const lib = require('./functionsLibrary.js');
+const insertElements = lib.insertElementsZip;
 const assert = require('assert');
 
 assert.deepEqual(insertElements([1,2],[3,4]),[[1,3],[2,4]])
