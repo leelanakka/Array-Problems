@@ -5,6 +5,7 @@ const reverseFibonacci = lib.generateReverseFibonacci;
 const greatestNumber = lib.greatestNumber;
 const lowestNumber = lib.lowestNumber;
 const averageOfArray = lib.averageOfArray;
+const mappingLength = lib.mappingLength;
 
 //if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElements([1,2],[3,4]),[[1,3],[2,4]])
@@ -36,3 +37,8 @@ assert.equal(averageOfArray([1,2]),1.5);
 assert.equal(averageOfArray([0,0]),0);
 assert.equal(averageOfArray([1,2,3,4,5]),3);
 assert.equal(averageOfArray([-1,-2]),-1.5);
+
+//if the user gives you the a array of names or words it should return array of lenths of their words in an order
+assert.deepEqual(mappingLength(["leela"]),[5])
+assert.deepEqual(mappingLength([""]),[0])
+assert.deepEqual(mappingLength(["mary","had","a","little","lamb"]),[4,3,1,6,4])

@@ -1,4 +1,16 @@
-//Average of a list - Given a list of numbers, find the average of that list
+//Mapping lengths - Given a list of names, generate another array that contains the length of each of the names:
+//["mary","had","a","little","lamb"] => [4, 3, 1, 6, 4]
+
+const mappingLengthsOfWords = function(wordsArray){
+  let mappingLength = [];
+  for(let index=0; index<wordsArray.length ; index++){
+    mappingLength.push(wordsArray[index].length);
+  }
+  return mappingLength;
+}
+
+
+
 
 const findingAverageOfArray = function(numbersArray){
   let average = 0;
@@ -79,3 +91,4 @@ exports.generateReverseFibonacci = generateReverseFibonacci;
 exports.greatestNumber = findGreatestNumber;
 exports.lowestNumber = findLowestNumber;
 exports.averageOfArray = findingAverageOfArray;
+exports.mappingLength = mappingLengthsOfWords;
