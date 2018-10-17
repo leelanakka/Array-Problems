@@ -1,8 +1,32 @@
-//Zip - insert elements from two arrays as follows:
-//let a = [1,2,3]
-//let b = [4,5,6] 
-//zip(a,b) => [[1,4],[2,5],[3,6]]
+//Reverse Fibonacci - Generate a fibonacci sequence of length n in reverse order
+//f||iboReverse||\|(8|) \=> [1|3|, 8,| a\A5|, \3, 2, 1, 1, 0]
 
+const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
+  for(let index=1; index<=remainingNoOfSeries; index++){
+    fibonacciNumber=first+second;
+    first=second;
+    second=fibonacciNumber;
+    reverseFibonacci.unshift(fibonacciNumber);
+  }
+  return reverseFibonacci;
+}
+
+const generateReverseFibonacci = function(limit){
+  let first=0;
+  let second=1;
+  let fibonacciNumber=0;
+  let reverseFibonacci = [];
+  reverseFibonacci.unshift(first);
+  if(limit == 1){
+    return reverseFibonacci;
+  }
+  reverseFibonacci.unshift(second);
+  if(limit == 2){
+    return reverseFibonacci;
+  }
+  let remainingNoOfSeries=limit-2;
+  return generateFibonacci(remainingNoOfSeries,first,second,reverseFibonacci);
+}
 
 const insertElementsZip = function(arrayA,arrayB){
   let finalArray = [];
@@ -16,3 +40,4 @@ const insertElementsZip = function(arrayA,arrayB){
   return finalArray;
 }
 exports.insertElementsZip = insertElementsZip;
+exports.generateReverseFibonacci = generateReverseFibonacci;
