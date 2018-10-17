@@ -1,5 +1,16 @@
-//Greatest number in a list - Given a list of numbers, find the greatest number in that sequence
-//[1,26,3,5] => 26
+//Lowest number in a list - Given a list of numbers, find the lowest number in that sequence
+//[26,3,1,5] => 1
+
+const findLowestNumber = function(numbersArray){
+  let lowestNumber = numbersArray[0];
+  for(let index=0; index<numbersArray.length; index++){
+    if(numbersArray[index] < lowestNumber){
+      lowestNumber = numbersArray[index];
+    }
+  }
+  return lowestNumber;
+}
+
 
 const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
   for(let index=1; index<=remainingNoOfSeries; index++){
@@ -59,3 +70,4 @@ const insertElementsZip = function(arrayA,arrayB){
 exports.insertElementsZip = insertElementsZip;
 exports.generateReverseFibonacci = generateReverseFibonacci;
 exports.greatestNumber = findGreatestNumber;
+exports.lowestNumber = findLowestNumber;

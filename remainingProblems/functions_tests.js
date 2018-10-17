@@ -3,6 +3,8 @@ const lib = require('./functionsLibrary.js');
 const insertElements = lib.insertElementsZip;
 const reverseFibonacci = lib.generateReverseFibonacci;
 const greatestNumber = lib.greatestNumber;
+const lowestNumber = lib.lowestNumber;
+
 //if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElements([1,2],[3,4]),[[1,3],[2,4]])
 //if I give the three elements in each of the array it should return with three different arrays containing each of two consequtive elements.
@@ -21,4 +23,9 @@ assert.equal(greatestNumber([0,1,2]),2);
 assert.equal(greatestNumber([0,0]),0);
 assert.equal(greatestNumber([0,-1]),0);
 assert.equal(greatestNumber([-1,-2,-3,-0]),0);
+assert.equal(greatestNumber([1,26,3,5]),26);
 
+//if the user gives the array of numbers it should print the greatest number in that array
+assert.equal(lowestNumber([0,1,-1]),-1);
+assert.equal(lowestNumber([0,1]),0);
+assert.equal(lowestNumber([1,26,3,5,-99]),-99);
