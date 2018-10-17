@@ -32,7 +32,7 @@ const generateReverseFibonacci = function(limit){
 }
 
 const findGreatestNumber = function(numbersArray){
-  let greatestNumber = 0;
+  let greatestNumber = numbersArray[0];
   for(let index=0; index<numbersArray.length; index++){
     if(numbersArray[index] > greatestNumber){
       greatestNumber = numbersArray[index];

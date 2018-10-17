@@ -18,4 +18,7 @@ assert.deepEqual(reverseFibonacci(2),[1,0]);
 //if the user gives the array of numbers it should print the greatest number in that array
 assert.equal(greatestNumber([0,1]),1);
 assert.equal(greatestNumber([0,1,2]),2);
+assert.equal(greatestNumber([0,0]),0);
+assert.equal(greatestNumber([0,-1]),0);
+assert.equal(greatestNumber([-1,-2,-3,-0]),0);
 
