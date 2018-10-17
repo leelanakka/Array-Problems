@@ -17,6 +17,9 @@ const generateReverseFibonacci = function(limit){
   let fibonacciNumber=0;
   let reverseFibonacci = [];
   reverseFibonacci.unshift(first);
+  if(limit<0){
+    return "please enter positive integer"
+  }
   if(limit == 1){
     return reverseFibonacci;
   }
