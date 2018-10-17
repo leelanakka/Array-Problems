@@ -6,6 +6,7 @@ const greatestNumber = lib.greatestNumber;
 const lowestNumber = lib.lowestNumber;
 const averageOfArray = lib.averageOfArray;
 const mappingLength = lib.mappingLength;
+const countOddNumbers = lib.countOddNumbers;
 
 //if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElements([1,2],[3,4]),[[1,3],[2,4]])
@@ -42,3 +43,8 @@ assert.equal(averageOfArray([-1,-2]),-1.5);
 assert.deepEqual(mappingLength(["leela"]),[5])
 assert.deepEqual(mappingLength([""]),[0])
 assert.deepEqual(mappingLength(["mary","had","a","little","lamb"]),[4,3,1,6,4])
+
+//if the user gives you the array of numbers it should return the count of the odd numbers present in it.
+assert.equal(countOddNumbers([0,1]),1)
+assert.equal(countOddNumbers([1,2,3,4,5]),3)
+assert.equal(countOddNumbers([2,4,6,8]),0)

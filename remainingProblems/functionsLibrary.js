@@ -1,6 +1,14 @@
-//Mapping lengths - Given a list of names, generate another array that contains the length of each of the names:
-//["mary","had","a","little","lamb"] => [4, 3, 1, 6, 4]
+//Counting odd numbers - Write a function to count how many odd numbers are present in an array
 
+const countOddNumbers = function(numbersArray){
+  let count = 0;
+  for(let index=0; index < numbersArray.length ; index++){
+    if(numbersArray[index]%2 != 0){
+      count++
+    }
+  }
+  return count;
+}
 const mappingLengthsOfWords = function(wordsArray){
   let mappingLength = [];
   for(let index=0; index<wordsArray.length ; index++){
@@ -8,9 +16,6 @@ const mappingLengthsOfWords = function(wordsArray){
   }
   return mappingLength;
 }
-
-
-
 
 const findingAverageOfArray = function(numbersArray){
   let average = 0;
@@ -92,3 +97,4 @@ exports.greatestNumber = findGreatestNumber;
 exports.lowestNumber = findLowestNumber;
 exports.averageOfArray = findingAverageOfArray;
 exports.mappingLength = mappingLengthsOfWords;
+exports.countOddNumbers = countOddNumbers;
