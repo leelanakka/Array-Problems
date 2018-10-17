@@ -1,5 +1,5 @@
-//Reverse Fibonacci - Generate a fibonacci sequence of length n in reverse order
-//f||iboReverse||\|(8|) \=> [1|3|, 8,| a\A5|, \3, 2, 1, 1, 0]
+//Greatest number in a list - Given a list of numbers, find the greatest number in that sequence
+//[1,26,3,5] => 26
 
 const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
   for(let index=1; index<=remainingNoOfSeries; index++){
@@ -31,6 +31,20 @@ const generateReverseFibonacci = function(limit){
   return generateFibonacci(remainingNoOfSeries,first,second,reverseFibonacci);
 }
 
+const findGreatestNumber = function(numbersArray){
+  let greatestNumber = 0;
+  for(let index=0; index<numbersArray.length; index++){
+    if(numbersArray[index] > greatestNumber){
+      greatestNumber = numbersArray[index];
+    }
+  }
+  return greatestNumber;
+}
+
+
+
+
+
 const insertElementsZip = function(arrayA,arrayB){
   let finalArray = [];
   let count = arrayA.length;
@@ -44,3 +58,4 @@ const insertElementsZip = function(arrayA,arrayB){
 }
 exports.insertElementsZip = insertElementsZip;
 exports.generateReverseFibonacci = generateReverseFibonacci;
+exports.greatestNumber = findGreatestNumber;
