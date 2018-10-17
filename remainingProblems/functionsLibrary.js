@@ -1,5 +1,16 @@
-//Lowest number in a list - Given a list of numbers, find the lowest number in that sequence
-//[26,3,1,5] => 1
+//Average of a list - Given a list of numbers, find the average of that list
+
+const findingAverageOfArray = function(numbersArray){
+  let average = 0;
+  let sum = 0;
+  let length = numbersArray.length;
+  for(let index=0; index<numbersArray.length; index++){
+    sum += numbersArray[index];
+  }
+  average = sum/length
+  return average;
+}
+
 
 const findLowestNumber = function(numbersArray){
   let lowestNumber = numbersArray[0];
@@ -10,7 +21,6 @@ const findLowestNumber = function(numbersArray){
   }
   return lowestNumber;
 }
-
 
 const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
   for(let index=1; index<=remainingNoOfSeries; index++){
@@ -52,10 +62,6 @@ const findGreatestNumber = function(numbersArray){
   return greatestNumber;
 }
 
-
-
-
-
 const insertElementsZip = function(arrayA,arrayB){
   let finalArray = [];
   let count = arrayA.length;
@@ -67,7 +73,9 @@ const insertElementsZip = function(arrayA,arrayB){
   }
   return finalArray;
 }
+
 exports.insertElementsZip = insertElementsZip;
 exports.generateReverseFibonacci = generateReverseFibonacci;
 exports.greatestNumber = findGreatestNumber;
 exports.lowestNumber = findLowestNumber;
+exports.averageOfArray = findingAverageOfArray;

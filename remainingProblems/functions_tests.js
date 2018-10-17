@@ -4,6 +4,7 @@ const insertElements = lib.insertElementsZip;
 const reverseFibonacci = lib.generateReverseFibonacci;
 const greatestNumber = lib.greatestNumber;
 const lowestNumber = lib.lowestNumber;
+const averageOfArray = lib.averageOfArray;
 
 //if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElements([1,2],[3,4]),[[1,3],[2,4]])
@@ -29,3 +30,8 @@ assert.equal(greatestNumber([1,26,3,5]),26);
 assert.equal(lowestNumber([0,1,-1]),-1);
 assert.equal(lowestNumber([0,1]),0);
 assert.equal(lowestNumber([1,26,3,5,-99]),-99);
+
+//if the user gives the array of numbers it should print the average of all the numbers.
+assert.equal(averageOfArray([1,2]),1.5);
+assert.equal(averageOfArray([0,0]),0);
+assert.equal(averageOfArray([1,2,3,4,5]),3);
