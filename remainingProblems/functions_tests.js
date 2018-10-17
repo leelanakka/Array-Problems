@@ -31,7 +31,8 @@ assert.equal(lowestNumber([0,1,-1]),-1);
 assert.equal(lowestNumber([0,1]),0);
 assert.equal(lowestNumber([1,26,3,5,-99]),-99);
 
-//if the user gives the array of numbers it should print the average of all the numbers.
+//if the user gives the array of numbers it should print the average of all the numbers whether the array contains positive pr negative numbers.
 assert.equal(averageOfArray([1,2]),1.5);
 assert.equal(averageOfArray([0,0]),0);
 assert.equal(averageOfArray([1,2,3,4,5]),3);
+assert.equal(averageOfArray([-1,-2]),-1.5);
