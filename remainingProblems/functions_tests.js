@@ -61,3 +61,5 @@ assert.equal(countEvenNumbers([-1]),0);
 // if the user gives you the array of numbers and number to find the index then it should return the first index of that number
 assert.equal(findIndexOfNumber([0],0),0);
 assert.equal(findIndexOfNumber([0,1],1),1);
+assert.equal(findIndexOfNumber([0,1,1],1),1);
+assert.equal(findIndexOfNumber([0,1,1],2),"");

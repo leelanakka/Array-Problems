@@ -1,13 +1,14 @@
-//Index Of a Number - Given an array of numbers find the first position of a specified number
+// Ascending order - Given an array of numbers, check if the array is in ascending order
 
 const findIndexOfNumber = function(numbersArray,number){
   let position = 0;
   for(let index = 0; index < numbersArray.length ; index++){
     if(numbersArray[index] == number){
       position = index;
+      return position;
+    }
   }
-}
-  return position; 
+  return ""; 
 }
 
 const countEvenNumbers = function(numbersArray){
