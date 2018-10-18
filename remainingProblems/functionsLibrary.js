@@ -11,6 +11,17 @@ const findIndexOfNumber = function(numbersArray,number){
   return ""; 
 }
 
+const isArrayAscending = function(numbersArray){
+  justification = "true";
+  for(let index = 0; index<numbersArray.length ; index++){
+    if(numbersArray[index] > numbersArray[index+1]){
+      justification = "false";
+      return justification;
+    }
+  }
+  return justification;
+}
+
 const countEvenNumbers = function(numbersArray){
   let count = 0;
   for(let index=0; index<numbersArray.length ; index++){
@@ -121,3 +132,4 @@ exports.mappingLength = mappingLengthsOfWords;
 exports.countOddNumbers = countOddNumbers;
 exports.countEvenNumbers = countEvenNumbers;
 exports.findIndexOfNumber = findIndexOfNumber;
+exports.isArrayAscending = isArrayAscending;
