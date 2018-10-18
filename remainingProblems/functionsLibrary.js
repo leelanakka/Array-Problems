@@ -1,3 +1,14 @@
+//Index Of a Number - Given an array of numbers find the first position of a specified number
+
+const findIndexOfNumber = function(numbersArray,number){
+  let position = 0;
+  for(let index = 0; index < numbersArray.length ; index++){
+    if(numbersArray[index] == number){
+      position = index;
+  }
+}
+  return position; 
+}
 
 const countEvenNumbers = function(numbersArray){
   let count = 0;
@@ -108,3 +119,4 @@ exports.averageOfArray = findingAverageOfArray;
 exports.mappingLength = mappingLengthsOfWords;
 exports.countOddNumbers = countOddNumbers;
 exports.countEvenNumbers = countEvenNumbers;
+exports.findIndexOfNumber = findIndexOfNumber;
