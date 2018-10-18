@@ -1,7 +1,7 @@
-//Unique - Given an array, remove duplicate elements and return an array of only unique elements.
+//Union - Given two arrays, generate a new array consisting of unique elements across both those arrays.
 
 const createUniqueArray = function(inputArray){
- let outputArray = [];
+  let outputArray = [];
   for(let number of inputArray){
     let numberToAdd = (!outputArray.includes(number))
     if(numberToAdd){
@@ -9,6 +9,12 @@ const createUniqueArray = function(inputArray){
     }
   }
   return outputArray;
+}
+
+const createUnionArray = function(array1,array2){
+  let uniqueArray1 = createUniqueArray(array1);
+  let uniqueArray2 = createUniqueArray(array2)
+  return uniqueArray1.concat(uniqueArray2);
 }
 
 const extractDigits = function(numberToExtract){
@@ -167,3 +173,4 @@ exports.isArrayAscending = isArrayAscending;
 exports.isArrayDescending = isArrayDescending;
 exports.extractDigits = extractDigits;
 exports.createUniqueArray = createUniqueArray;
+exports.createUnionArray = createUnionArray;
