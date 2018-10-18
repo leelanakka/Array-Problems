@@ -53,3 +53,6 @@ assert.equal(countOddNumbers([2,4,6,8]),0)
 //if the user gives you the array of numbers it should return the count of the even numbers present in it.
 assert.equal(countEvenNumbers([2]),1)
 assert.equal(countEvenNumbers([1]),0)
+assert.equal(countEvenNumbers([0,2,4,6,8]),5)
+assert.equal(countEvenNumbers([-2]),1)
+assert.equal(countEvenNumbers([-1]),0)

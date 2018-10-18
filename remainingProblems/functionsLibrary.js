@@ -1,4 +1,3 @@
-//Counting even numbers - Write a function to count how many even numbers are present in an array
 
 const countEvenNumbers = function(numbersArray){
   let count = 0;
