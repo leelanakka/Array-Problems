@@ -87,10 +87,15 @@ assert.deepEqual(extractDigits(12),[1,2]);
 assert.deepEqual(extractDigits(00),[0]);
 assert.deepEqual(extractDigits(20345),[2,0,3,4,5]);
 
-// If the user gives you an input array it should return with an unquie array
+// If the user gives you an input array it should return with an unique array
 assert.deepEqual(createUniqueArray([1,2]),[1,2]);
 assert.deepEqual(createUniqueArray([1,1]),[1]);
 assert.deepEqual(createUniqueArray([1,2,3,1,2]),[1,2,3]);
 assert.deepEqual(createUniqueArray([0,0,1,2,3,1,2]),[0,1,2,3]);
  
+// if the user gives input as two sets of numbers(arrays) then it should return the union of the two arrays in an array
 assert.deepEqual(createUnionArray([1],[2]),[1,2]);
+assert.deepEqual(createUnionArray([1,2],[2]),[1,2]);
+assert.deepEqual(createUnionArray([1,2,3],[4,5]),[1,2,3,4,5]);
+assert.deepEqual(createUnionArray([1,2,3],[1,2,3,4,5]),[1,2,3,4,5]);
+assert.deepEqual(createUnionArray([1,2,3,4,5],[1,2,3]),[1,2,3,4,5]);

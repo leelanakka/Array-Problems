@@ -14,7 +14,8 @@ const createUniqueArray = function(inputArray){
 const createUnionArray = function(array1,array2){
   let uniqueArray1 = createUniqueArray(array1);
   let uniqueArray2 = createUniqueArray(array2)
-  return uniqueArray1.concat(uniqueArray2);
+  unionArray = uniqueArray1.concat(uniqueArray2);
+  return createUniqueArray(unionArray);
 }
 
 const extractDigits = function(numberToExtract){
@@ -173,4 +174,4 @@ exports.isArrayAscending = isArrayAscending;
 exports.isArrayDescending = isArrayDescending;
 exports.extractDigits = extractDigits;
 exports.createUniqueArray = createUniqueArray;
-exports.createUnionArray = createUnionArray;
+exports.createUnionArray = createUnionArray
