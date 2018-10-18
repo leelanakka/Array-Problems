@@ -74,3 +74,6 @@ assert.equal(isArrayAscending([0,1,2,3,4,5]),true);
 
 // if the user gives the array of numbers then it should return whether the array is in descending order or not
 assert.equal(isArrayDescending([1,0]),true);
+assert.equal(isArrayDescending([1,0,1]),false);
+assert.equal(isArrayDescending([5,4,3,2,-1,-1]),true);
+assert.equal(isArrayDescending([0,0,0,0]),true);

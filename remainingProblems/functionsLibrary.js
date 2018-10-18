@@ -12,12 +12,18 @@ const findIndexOfNumber = function(numbersArray,number){
 }
 
 const isArrayDescending = function(numbersArray){
- let justification = isArrayAscending(numbersArray);
-  return !justification;
+  let justification = true;
+  for(let index = 0; index<numbersArray.length ; index++){
+    if(numbersArray[index] < numbersArray[index+1]){
+      justification = false;
+      return justification;
+    }
+  }
+  return justification;
 }
 
 const isArrayAscending = function(numbersArray){
-  justification = true;
+  let justification = true;
   for(let index = 0; index<numbersArray.length ; index++){
     if(numbersArray[index] > numbersArray[index+1]){
       justification = false;
