@@ -1,4 +1,14 @@
-//Counting odd numbers - Write a function to count how many odd numbers are present in an array
+//Counting even numbers - Write a function to count how many even numbers are present in an array
+
+const countEvenNumbers = function(numbersArray){
+  let count = 0;
+  for(let index=0; index<numbersArray.length ; index++){
+    if(numbersArray[index]%2 == 0){
+      count++
+    }
+  }
+  return count;
+}
 
 const countOddNumbers = function(numbersArray){
   let count = 0;
@@ -98,3 +108,4 @@ exports.lowestNumber = findLowestNumber;
 exports.averageOfArray = findingAverageOfArray;
 exports.mappingLength = mappingLengthsOfWords;
 exports.countOddNumbers = countOddNumbers;
+exports.countEvenNumbers = countEvenNumbers;
