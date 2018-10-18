@@ -69,3 +69,4 @@ assert.equal(findIndexOfNumber([0,1,1],2),"");
 assert.equal(isArrayAscending([0,1]),true);
 assert.equal(isArrayAscending([0,1,-1]),false);
 assert.equal(isArrayAscending([0,1,2,3,4,5]),true);
+assert.equal(isArrayAscending([0,1,2,3,4,5]),true);
