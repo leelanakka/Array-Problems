@@ -1,6 +1,15 @@
-/*Extract digits - Given a number, extract the digits of a number into an array:
-extract(20345) => [2,0,3,4,5] */
+//Unique - Given an array, remove duplicate elements and return an array of only unique elements.
 
+const createUniqueArray = function(inputArray){
+ let outputArray = [];
+  for(let number of inputArray){
+    let numberToAdd = (!outputArray.includes(number))
+    if(numberToAdd){
+      outputArray.push(number);
+    }
+  }
+  return outputArray;
+}
 
 const extractDigits = function(numberToExtract){
   let digitsArray = [];
@@ -157,3 +166,4 @@ exports.findIndexOfNumber = findIndexOfNumber;
 exports.isArrayAscending = isArrayAscending;
 exports.isArrayDescending = isArrayDescending;
 exports.extractDigits = extractDigits;
+exports.createUniqueArray = createUniqueArray;

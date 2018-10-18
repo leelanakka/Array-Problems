@@ -11,7 +11,8 @@ const{
   findIndexOfNumber,
   isArrayAscending,
   isArrayDescending,
-  extractDigits} = require('./functionsLibrary.js');
+  extractDigits,
+  createUniqueArray} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -84,3 +85,9 @@ assert.deepEqual(extractDigits(1),[1]);
 assert.deepEqual(extractDigits(12),[1,2]);
 assert.deepEqual(extractDigits(00),[0]);
 assert.deepEqual(extractDigits(20345),[2,0,3,4,5]);
+
+// If the user gives you an input array it should return with an unquie array
+assert.deepEqual(createUniqueArray([1,2]),[1,2])
+assert.deepEqual(createUniqueArray([1,1]),[1])
+assert.deepEqual(createUniqueArray([1,2,3,1,2]),[1,2,3])
+assert.deepEqual(createUniqueArray([0,0,1,2,3,1,2]),[0,1,2,3])
