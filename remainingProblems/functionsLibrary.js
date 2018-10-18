@@ -1,4 +1,3 @@
-// Ascending order - Given an array of numbers, check if the array is in ascending order
 
 const findIndexOfNumber = function(numbersArray,number){
   let position = 0;
@@ -12,10 +11,10 @@ const findIndexOfNumber = function(numbersArray,number){
 }
 
 const isArrayAscending = function(numbersArray){
-  justification = "true";
+  justification = true;
   for(let index = 0; index<numbersArray.length ; index++){
     if(numbersArray[index] > numbersArray[index+1]){
-      justification = "false";
+      justification = false;
       return justification;
     }
   }

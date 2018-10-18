@@ -66,4 +66,6 @@ assert.equal(findIndexOfNumber([0,1,1],1),1);
 assert.equal(findIndexOfNumber([0,1,1],2),"");
 
 // if the user gives the array of numbers then it should return whether the array is in ascending order or not
-assert.equal(isArrayAscending([0,1]),"true");
+assert.equal(isArrayAscending([0,1]),true);
+assert.equal(isArrayAscending([0,1,-1]),false);
+assert.equal(isArrayAscending([0,1,2,3,4,5]),true);
