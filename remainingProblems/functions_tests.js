@@ -9,7 +9,8 @@ const{
   countOddNumbers, 
   countEvenNumbers,
   findIndexOfNumber,
-  isArrayAscending} = require('./functionsLibrary.js');
+  isArrayAscending,
+  isArrayDescending} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -70,3 +71,6 @@ assert.equal(isArrayAscending([0,1]),true);
 assert.equal(isArrayAscending([0,1,-1]),false);
 assert.equal(isArrayAscending([0,1,2,3,4,5]),true);
 assert.equal(isArrayAscending([0,1,2,3,4,5]),true);
+
+// if the user gives the array of numbers then it should return whether the array is in descending order or not
+assert.equal(isArrayDescending([1,0]),true);

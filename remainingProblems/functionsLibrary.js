@@ -1,3 +1,4 @@
+//Descending order - Given an array of numbers, check if the array is in descending order
 
 const findIndexOfNumber = function(numbersArray,number){
   let position = 0;
@@ -8,6 +9,11 @@ const findIndexOfNumber = function(numbersArray,number){
     }
   }
   return ""; 
+}
+
+const isArrayDescending = function(numbersArray){
+ let justification = isArrayAscending(numbersArray);
+  return !justification;
 }
 
 const isArrayAscending = function(numbersArray){
@@ -132,3 +138,4 @@ exports.countOddNumbers = countOddNumbers;
 exports.countEvenNumbers = countEvenNumbers;
 exports.findIndexOfNumber = findIndexOfNumber;
 exports.isArrayAscending = isArrayAscending;
+exports.isArrayDescending = isArrayDescending;
