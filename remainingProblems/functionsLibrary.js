@@ -1,4 +1,15 @@
-//Descending order - Given an array of numbers, check if the array is in descending order
+/*Extract digits - Given a number, extract the digits of a number into an array:
+extract(20345) => [2,0,3,4,5] */
+
+
+const extractDigits = function(numberToExtract){
+  let digitsArray = [];
+  string = ""+numberToExtract;
+  for(let index = 0; index < string.length ; index++){
+    digitsArray.push(string[index]);
+  }
+  return digitsArray;
+}
 
 const findIndexOfNumber = function(numbersArray,number){
   let position = 0;
@@ -145,3 +156,4 @@ exports.countEvenNumbers = countEvenNumbers;
 exports.findIndexOfNumber = findIndexOfNumber;
 exports.isArrayAscending = isArrayAscending;
 exports.isArrayDescending = isArrayDescending;
+exports.extractDigits = extractDigits;

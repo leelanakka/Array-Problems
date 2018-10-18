@@ -10,7 +10,8 @@ const{
   countEvenNumbers,
   findIndexOfNumber,
   isArrayAscending,
-  isArrayDescending} = require('./functionsLibrary.js');
+  isArrayDescending,
+  extractDigits} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -77,3 +78,9 @@ assert.equal(isArrayDescending([1,0]),true);
 assert.equal(isArrayDescending([1,0,1]),false);
 assert.equal(isArrayDescending([5,4,3,2,-1,-1]),true);
 assert.equal(isArrayDescending([0,0,0,0]),true);
+
+// if the user gives a number it should return with each digits in an array.
+assert.deepEqual(extractDigits(1),[1]);
+assert.deepEqual(extractDigits(12),[1,2]);
+assert.deepEqual(extractDigits(00),[0]);
+assert.deepEqual(extractDigits(20345),[2,0,3,4,5]);
