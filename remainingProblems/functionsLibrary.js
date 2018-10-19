@@ -1,6 +1,16 @@
-//Union - Given two arrays, generate a new array consisting of unique elements across both those arrays.
+//Intersection - Given two arrays, generate a new array consisting of unique elements that are contained in both arrays.
 
-const createUniqueArray = function(inputArray){
+const findIntersection = function(array1,array2){
+  let outputArray = [];
+  for(let number of array1){
+    if(array2.includes(number)){
+      outputArray.push(number)
+    }
+  }
+  return outputArray;
+}
+
+const findUniqueArray = function(inputArray){
   let outputArray = [];
   for(let number of inputArray){
     let numberToAdd = (!outputArray.includes(number))
@@ -11,11 +21,11 @@ const createUniqueArray = function(inputArray){
   return outputArray;
 }
 
-const createUnionArray = function(array1,array2){
-  let uniqueArray1 = createUniqueArray(array1);
-  let uniqueArray2 = createUniqueArray(array2)
+const findUnionArray = function(array1,array2){
+  let uniqueArray1 = findUniqueArray(array1);
+  let uniqueArray2 = findUniqueArray(array2)
   unionArray = uniqueArray1.concat(uniqueArray2);
-  return createUniqueArray(unionArray);
+  return findUniqueArray(unionArray);
 }
 
 const extractDigits = function(numberToExtract){
@@ -173,5 +183,6 @@ exports.findIndexOfNumber = findIndexOfNumber;
 exports.isArrayAscending = isArrayAscending;
 exports.isArrayDescending = isArrayDescending;
 exports.extractDigits = extractDigits;
-exports.createUniqueArray = createUniqueArray;
-exports.createUnionArray = createUnionArray
+exports.findUniqueArray = findUniqueArray;
+exports.findUnionArray = findUnionArray
+exports.findIntersection = findIntersection;
