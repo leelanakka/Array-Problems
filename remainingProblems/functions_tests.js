@@ -104,3 +104,8 @@ assert.deepEqual(findUnionArray([1,2,3,4,5],[1,2,3]),[1,2,3,4,5]);
 // if the user gives input of two arrays then the it should return the intersection of the two arrays;
 assert.deepEqual(findIntersection([1],[2]),[]);
 assert.deepEqual(findIntersection([1],[1]),[1]);
+assert.deepEqual(findIntersection([1,1],[1,1]),[1]);
+assert.deepEqual(findIntersection([1,2],[1,1]),[1]);
+assert.deepEqual(findIntersection([1,2],[1,2]),[1,2]);
+assert.deepEqual(findIntersection([1,1],[2,2]),[]);
+assert.deepEqual(findIntersection([1,2],[1,2,3]),[1,2]);

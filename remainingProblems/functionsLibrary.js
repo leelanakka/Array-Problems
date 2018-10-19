@@ -2,8 +2,10 @@
 
 const findIntersection = function(array1,array2){
   let outputArray = [];
-  for(let number of array1){
-    if(array2.includes(number)){
+  uniqueArray1 = findUniqueArray(array1);
+  uniqueArray2 = findUniqueArray(array2)
+  for(let number of uniqueArray1){
+    if(uniqueArray2.includes(number)){
       outputArray.push(number)
     }
   }
