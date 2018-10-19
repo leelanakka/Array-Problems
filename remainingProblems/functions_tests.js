@@ -17,7 +17,8 @@ const{
   findIntersection,
   findDifference,
   isSubset,
-  rotateArray} = require('./functionsLibrary.js');
+  rotateArray,
+  partitionOfArray} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -132,3 +133,5 @@ assert.deepEqual(rotateArray([1,2,3,4,5],2),[3,4,5,1,2])
 assert.deepEqual(rotateArray([1,2,3,4,5],4),[5,1,2,3,4])
 assert.deepEqual(rotateArray([1,2,3,4,5],0),[1,2,3,4,5])
 
+// if the user gives an array of numbers and limit then it will seperate two arrays of the numbers
+assert.deepEqual(partitionOfArray([1,2],1),[[1],[2]])

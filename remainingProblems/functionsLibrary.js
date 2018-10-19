@@ -1,7 +1,18 @@
-/*  Rotate - creates a new array by rotating elements from the given array.
+/* Partition - Given an array of numbers, it returns a partitioned array consisting of numbers above a certain number and below a certain number
+partition([1,2,7,4,9,10,5],5) => [[1,2,4,5], [7,9,10]] */
 
-rotate([1,2,3,4,5],2) => [3,4,5,1,2]
-rotate([1,2,3,4,5],5) => [5,1,2,3,4] */
+const partitionOfArray = function(numbersArray,limit){
+  let array1 = [];
+  let array2 = [];
+  for(let index = 0; index < numbersArray.length ; index++){
+    if(numbersArray[index] <= limit){
+      array1.push(numbersArray[index]);
+    } else{
+      array2.push(numbersArray[index]);
+    }
+  }
+  return [array1,array2];
+}
 
 const rotateArray = function(inputArray,position){
   let outputArray = inputArray;
@@ -227,3 +238,4 @@ exports.findIntersection = findIntersection;
 exports.findDifference = findDifference;
 exports.isSubset = isSubset;
 exports.rotateArray = rotateArray;
+exports.partitionOfArray = partitionOfArray;
