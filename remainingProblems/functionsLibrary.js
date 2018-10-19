@@ -1,3 +1,15 @@
+/*  Rotate - creates a new array by rotating elements from the given array.
+
+rotate([1,2,3,4,5],2) => [3,4,5,1,2]
+rotate([1,2,3,4,5],5) => [5,1,2,3,4] */
+
+const rotateArray = function(inputArray,position){
+  let outputArray = inputArray;
+  for(let index = 0; index < position ; index++){
+    outputArray.push(outputArray.shift());
+  }
+  return outputArray;
+}
 
 const isSubset = function(array1,array2){
   uniqueArray1 = findUniqueArray(array1);
@@ -214,3 +226,4 @@ exports.findUnionArray = findUnionArray
 exports.findIntersection = findIntersection;
 exports.findDifference = findDifference;
 exports.isSubset = isSubset;
+exports.rotateArray = rotateArray;
