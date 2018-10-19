@@ -15,7 +15,8 @@ const{
   findUniqueArray,
   findUnionArray,
   findIntersection,
-  findDifference} = require('./functionsLibrary.js');
+  findDifference,
+  isSubset} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -117,3 +118,7 @@ assert.deepEqual(findDifference([1],[2]),[1])
 assert.deepEqual(findDifference([1,2],[2]),[1])
 assert.deepEqual(findDifference([1,2],[]),[1,2])
 assert.deepEqual(findDifference([1,2,1,2],[3,4,2,2,2]),[1])
+
+
+assert.equal(isSubset([1],[1]),true);
+assert.equal(isSubset([1],[2]),false);

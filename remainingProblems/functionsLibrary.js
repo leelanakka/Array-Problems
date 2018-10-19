@@ -1,4 +1,16 @@
-// Difference - Given two arrays, generate a new array that consists of unique elements that are present in the first array, but not in the second.
+// isSubset - Given two arrays, check if the second is a proper subset of the first.
+
+const isSubset = function(array1,array2){
+  uniqueArray1 = findUniqueArray(array1);
+  uniqueArray2 = findUniqueArray(array2);
+  let decision = true;
+  for(let number of uniqueArray1){
+    if(!uniqueArray2.includes(number)){
+      return false;
+    }
+  }
+  return decision;
+}
 
 const findDifference = function(array1,array2) {
   let outputArray = [];
@@ -202,3 +214,4 @@ exports.findUniqueArray = findUniqueArray;
 exports.findUnionArray = findUnionArray
 exports.findIntersection = findIntersection;
 exports.findDifference = findDifference;
+exports.isSubset = isSubset;
