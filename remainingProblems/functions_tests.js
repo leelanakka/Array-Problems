@@ -135,3 +135,6 @@ assert.deepEqual(rotateArray([1,2,3,4,5],0),[1,2,3,4,5])
 
 // if the user gives an array of numbers and limit then it will seperate two arrays of the numbers
 assert.deepEqual(partitionOfArray([1,2],1),[[1],[2]])
+assert.deepEqual(partitionOfArray([1,2,7,4,9,10,5],5),[[1,2,4,5], [7,9,10]])
+assert.deepEqual(partitionOfArray([1,2,3,4,1,2,3,4,9,10,1,2],5),[[1,2,3,4,1,2,3,4,1,2],[9,10]])
+assert.deepEqual(partitionOfArray([1,2],3),[[1,2],[]])
