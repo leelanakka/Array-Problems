@@ -126,5 +126,9 @@ assert.equal(isSubset([1],[2]),false);
 assert.equal(isSubset([1,1,1],[2,1,1]),true);
 assert.equal(isSubset([1,1,2,3],[2,1,1,3,4,5,2,3,1,4]),true);
 
-
+// if the user gives one array of numbers and an position value to rotate it should rotate as per teh position 
 assert.deepEqual(rotateArray([1,2],1),[2,1])
+assert.deepEqual(rotateArray([1,2,3,4,5],2),[3,4,5,1,2])
+assert.deepEqual(rotateArray([1,2,3,4,5],4),[5,1,2,3,4])
+assert.deepEqual(rotateArray([1,2,3,4,5],0),[1,2,3,4,5])
+
