@@ -119,6 +119,8 @@ assert.deepEqual(findDifference([1,2],[2]),[1])
 assert.deepEqual(findDifference([1,2],[]),[1,2])
 assert.deepEqual(findDifference([1,2,1,2],[3,4,2,2,2]),[1])
 
-
+// if the user gives the two arrays of numbers it should return the bullion value for whether the array 1 is proper subset of array 2 or not 
 assert.equal(isSubset([1],[1]),true);
 assert.equal(isSubset([1],[2]),false);
+assert.equal(isSubset([1,1,1],[2,1,1]),true);
+assert.equal(isSubset([1,1,2,3],[2,1,1,3,4,5,2,3,1,4]),true);

@@ -1,4 +1,3 @@
-// isSubset - Given two arrays, check if the second is a proper subset of the first.
 
 const isSubset = function(array1,array2){
   uniqueArray1 = findUniqueArray(array1);
