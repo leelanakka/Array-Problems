@@ -1,4 +1,17 @@
-//Intersection - Given two arrays, generate a new array consisting of unique elements that are contained in both arrays.
+// Difference - Given two arrays, generate a new array that consists of unique elements that are present in the first array, but not in the second.
+
+const findDifference = function(array1,array2) {
+  let outputArray = [];
+  uniqueArray1 = findUniqueArray(array1);
+  uniqueArray2 = findUniqueArray(array2)
+  for(let number of uniqueArray1){
+    if(!uniqueArray2.includes(number)){
+      outputArray.push(number)
+    }
+  }
+  return outputArray;
+}
+
 
 const findIntersection = function(array1,array2){
   let outputArray = [];
@@ -188,3 +201,4 @@ exports.extractDigits = extractDigits;
 exports.findUniqueArray = findUniqueArray;
 exports.findUnionArray = findUnionArray
 exports.findIntersection = findIntersection;
+exports.findDifference = findDifference;

@@ -14,7 +14,8 @@ const{
   extractDigits,
   findUniqueArray,
   findUnionArray,
-  findIntersection} = require('./functionsLibrary.js');
+  findIntersection,
+  findDifference} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -109,3 +110,10 @@ assert.deepEqual(findIntersection([1,2],[1,1]),[1]);
 assert.deepEqual(findIntersection([1,2],[1,2]),[1,2]);
 assert.deepEqual(findIntersection([1,1],[2,2]),[]);
 assert.deepEqual(findIntersection([1,2],[1,2,3]),[1,2]);
+
+// if the user gives input of two arrays then it should return the the elements that are not present in the second array but present in the first array
+assert.deepEqual(findDifference([1],[1]),[])
+assert.deepEqual(findDifference([1],[2]),[1])
+assert.deepEqual(findDifference([1,2],[2]),[1])
+assert.deepEqual(findDifference([1,2],[]),[1,2])
+assert.deepEqual(findDifference([1,2,1,2],[3,4,2,2,2]),[1])
