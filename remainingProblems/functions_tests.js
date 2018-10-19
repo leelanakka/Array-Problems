@@ -97,7 +97,7 @@ assert.deepEqual(findUniqueArray([1,2]),[1,2]);
 assert.deepEqual(findUniqueArray([1,1]),[1]);
 assert.deepEqual(findUniqueArray([1,2,3,1,2]),[1,2,3]);
 assert.deepEqual(findUniqueArray([0,0,1,2,3,1,2]),[0,1,2,3]);
- 
+
 // if the user gives input as two sets of numbers(arrays) then it should return the union of the two arrays in an array
 assert.deepEqual(findUnionArray([1],[2]),[1,2]);
 assert.deepEqual(findUnionArray([1,2],[2]),[1,2]);

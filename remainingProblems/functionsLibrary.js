@@ -1,6 +1,3 @@
-/* Partition - Given an array of numbers, it returns a partitioned array consisting of numbers above a certain number and below a certain number
-partition([1,2,7,4,9,10,5],5) => [[1,2,4,5], [7,9,10]] */
-
 const partitionOfArray = function(numbersArray,limit){
   let array1 = [];
   let array2 = [];
