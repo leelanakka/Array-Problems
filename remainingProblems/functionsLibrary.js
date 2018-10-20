@@ -135,12 +135,13 @@ const countOddNumbers = function(numbersArray){
   }
   return count;
 }
-const mappingLengthsOfWords = function(wordsArray){
-  let mappingLength = [];
-  for(let index=0; index<wordsArray.length ; index++){
-    mappingLength.push(wordsArray[index].length);
-  }
-  return mappingLength;
+
+const findLengthOfString = function(string){
+  return string.length;
+}
+
+const mappingLengthsOfWords = function(array){
+  return array.map(findLengthOfString);
 }
 
 const findSum = function(num1,num2) {
