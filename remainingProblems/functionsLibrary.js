@@ -143,15 +143,13 @@ const mappingLengthsOfWords = function(wordsArray){
   return mappingLength;
 }
 
+const findSum = function(num1,num2) {
+  return num1+num2;
+}
+
 const findingAverageOfArray = function(numbersArray){
-  let average = 0;
-  let sum = 0;
   let length = numbersArray.length;
-  for(let index=0; index<numbersArray.length; index++){
-    sum += numbersArray[index];
-  }
-  average = sum/length
-  return average;
+  return numbersArray.reduce(findSum)/length;
 }
 
 const findLowestNumber = function(numbersArray){
@@ -195,13 +193,13 @@ const generateReverseFibonacci = function(limit){
 }
 
 const findGreatestNumber = function(numbersArray){
-  let greatestNumber = numbersArray[0];
-  for(let index=0; index<numbersArray.length; index++){
-    if(numbersArray[index] > greatestNumber){
-      greatestNumber = numbersArray[index];
+  const greatestNumber = function(num1,num2) {
+    if(num1>num2){
+      return num1;
     }
+    return num2;
   }
-  return greatestNumber;
+  return numbersArray.reduce(greatestNumber);
 }
 
 const insertElementsZip = function(arrayA,arrayB){
