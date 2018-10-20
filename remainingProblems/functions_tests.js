@@ -18,7 +18,9 @@ const{
   findDifference,
   isSubset,
   rotateArray,
-  partitionOfArray} = require('./functionsLibrary.js');
+  partitionOfArray,
+  filterEvenNumbers,
+  filterOddNumbers} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -60,6 +62,17 @@ assert.deepEqual(mappingLength(["mary","had","a","little","lamb"]),[4,3,1,6,4]);
 assert.equal(countOddNumbers([0,1]),1);
 assert.equal(countOddNumbers([1,2,3,4,5]),3);
 assert.equal(countOddNumbers([2,4,6,8]),0);
+
+//if the user gives the input as array of the numbers then it should return the array of even numbers.
+assert.deepEqual(filterEvenNumbers([1]),[]);
+assert.deepEqual(filterEvenNumbers([1,2]),[2]);
+assert.deepEqual(filterEvenNumbers([4,2]),[4,2]);
+assert.deepEqual(filterEvenNumbers([2,3,4,5,6]),[2,4,6]);
+
+//if the user gives the input as array of the numbers then it should return the array of odd numbers.
+assert.deepEqual(filterOddNumbers([1,2,3]),[1,3])
+assert.deepEqual(filterOddNumbers([11,22,23,34]),[11,23])
+assert.deepEqual(filterOddNumbers([11,22,23,34]),[11,23])
 
 // if the user gives you the array of numbers it should return the count of the even numbers present in it.
 assert.equal(countEvenNumbers([2]),1);

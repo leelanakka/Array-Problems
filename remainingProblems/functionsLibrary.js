@@ -124,6 +124,14 @@ const countEvenNumbers = function(numbersArray){
   return numbersArray.filter(isEven).length;
 }
 
+const filterEvenNumbers = function(numbersArray){
+  return numbersArray.filter(isEven);
+}
+
+const filterOddNumbers = function(numbersArray){
+  return numbersArray.filter(isOdd);
+}
+
 const isOdd = function(number) {
   return number%2 != 0;
 }
@@ -149,13 +157,14 @@ const findingAverageOfArray = function(numbersArray){
   return numbersArray.reduce(findSum)/length;
 }
 
-const findLowestNumber = function(numbersArray){
-  const lowestNumber = function(num1,num2) {
-    if(num1<num2){
-      return num1;
-    }
-    return num2;
+const lowestNumber = function(num1,num2) {
+  if(num1<num2){
+    return num1;
   }
+  return num2;
+}
+
+const findLowestNumber = function(numbersArray){
   return numbersArray.reduce(lowestNumber);
 }
 
@@ -230,3 +239,5 @@ exports.findDifference = findDifference;
 exports.isSubset = isSubset;
 exports.rotateArray = rotateArray;
 exports.partitionOfArray = partitionOfArray;
+exports.filterEvenNumbers = filterEvenNumbers;
+exports.filterOddNumbers = filterOddNumbers;
