@@ -128,12 +128,12 @@ const filterEvenNumbers = function(numbersArray){
   return numbersArray.filter(isEven);
 }
 
-const filterOddNumbers = function(numbersArray){
-  return numbersArray.filter(isOdd);
-}
-
 const isOdd = function(number) {
   return number%2 != 0;
+}
+
+const filterOddNumbers = function(numbersArray){
+  return numbersArray.filter(isOdd);
 }
 
 const countOddNumbers = function(numbersArray){
@@ -150,6 +150,10 @@ const mappingLengthsOfWords = function(array){
 
 const findSum = function(num1,num2) {
   return num1+num2;
+}
+
+const findSumOfArray = function(numbersArray){
+  return numbersArray.reduce(findSum);
 }
 
 const findingAverageOfArray = function(numbersArray){
@@ -241,3 +245,4 @@ exports.rotateArray = rotateArray;
 exports.partitionOfArray = partitionOfArray;
 exports.filterEvenNumbers = filterEvenNumbers;
 exports.filterOddNumbers = filterOddNumbers;
+exports.findSumOfArray = findSumOfArray;

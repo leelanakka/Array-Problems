@@ -20,7 +20,8 @@ const{
   rotateArray,
   partitionOfArray,
   filterEvenNumbers,
-  filterOddNumbers} = require('./functionsLibrary.js');
+  filterOddNumbers,
+  findSumOfArray} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -46,6 +47,12 @@ assert.equal(greatestNumber([1,26,3,5]),26);
 assert.equal(lowestNumber([0,1,-1]),-1);
 assert.equal(lowestNumber([0,1]),0);
 assert.equal(lowestNumber([1,26,3,5,-99]),-99);
+
+//if the user gives you the array of the numbers then it should return the sum of all the numbers.
+assert.equal(findSumOfArray([0]),0);
+assert.equal(findSumOfArray([1,2]),3);
+assert.equal(findSumOfArray([4,2]),6);
+assert.equal(findSumOfArray([2,3,4,5,6]),20);
 
 // if the user gives the array of numbers it should print the average of all the numbers whether the array contains positive pr negative numbers.
 assert.equal(averageOfArray([1,2]),1.5);
