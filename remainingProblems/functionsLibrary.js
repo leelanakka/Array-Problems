@@ -126,14 +126,12 @@ const countEvenNumbers = function(numbersArray){
   return count;
 }
 
+const isOdd = function(number) {
+  return number%2 != 0;
+}
+
 const countOddNumbers = function(numbersArray){
-  let count = 0;
-  for(let index=0; index < numbersArray.length ; index++){
-    if(numbersArray[index]%2 != 0){
-      count++
-    }
-  }
-  return count;
+  return numbersArray.filter(isOdd).length;
 }
 
 const findLengthOfString = function(string){
