@@ -172,6 +172,10 @@ const findLowestNumber = function(numbersArray){
   return numbersArray.reduce(lowestNumber);
 }
 
+const reverseArray = function(inputArray){
+  return inputArray.reverse();
+}
+
 const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
   for(let index=1; index<=remainingNoOfSeries; index++){
     fibonacciNumber=first+second;
@@ -246,3 +250,4 @@ exports.partitionOfArray = partitionOfArray;
 exports.filterEvenNumbers = filterEvenNumbers;
 exports.filterOddNumbers = filterOddNumbers;
 exports.findSumOfArray = findSumOfArray;
+exports.reverseArray = reverseArray;

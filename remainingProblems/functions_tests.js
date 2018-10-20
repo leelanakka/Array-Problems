@@ -21,7 +21,8 @@ const{
   partitionOfArray,
   filterEvenNumbers,
   filterOddNumbers,
-  findSumOfArray} = require('./functionsLibrary.js');
+  findSumOfArray,
+  reverseArray} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -158,3 +159,9 @@ assert.deepEqual(partitionOfArray([1,2],1),[[1],[2]])
 assert.deepEqual(partitionOfArray([1,2,7,4,9,10,5],5),[[1,2,4,5], [7,9,10]])
 assert.deepEqual(partitionOfArray([1,2,3,4,1,2,3,4,9,10,1,2],5),[[1,2,3,4,1,2,3,4,1,2],[9,10]])
 assert.deepEqual(partitionOfArray([1,2],3),[[1,2],[]])
+
+// if the user gives an array of numbers it should return the reverse array of numbers.
+assert.deepEqual(reverseArray([0]),[0]);
+assert.deepEqual(reverseArray([1,2]),[2,1]);
+assert.deepEqual(reverseArray([4,2]),[2,4]);
+assert.deepEqual(reverseArray([2,3,4,5,6]),[6,5,4,3,2]);
