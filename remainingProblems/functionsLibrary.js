@@ -6,7 +6,7 @@ const partitionOfArray = function(numbersArray,limit){
       array1.push(numbersArray[index]);
     } else{
       array2.push(numbersArray[index]);
-    }
+       }
   }
   return [array1,array2];
 }
@@ -154,15 +154,14 @@ const findingAverageOfArray = function(numbersArray){
   return average;
 }
 
-
 const findLowestNumber = function(numbersArray){
-  let lowestNumber = numbersArray[0];
-  for(let index=0; index<numbersArray.length; index++){
-    if(numbersArray[index] < lowestNumber){
-      lowestNumber = numbersArray[index];
+  const lowestNumber = function(num1,num2) {
+    if(num1<num2){
+      return num1;
     }
+    return num2;
   }
-  return lowestNumber;
+  return numbersArray.reduce(lowestNumber);
 }
 
 const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
