@@ -83,7 +83,9 @@ const extractDigits = function(numberToExtract){
   let digitsArray = [];
   string = ""+numberToExtract;
   for(let index = 0; index < string.length ; index++){
-    digitsArray.push(string[index]);
+    if(string[index]<=9){
+      digitsArray.push(string[index]);
+    }
   }
   return digitsArray;
 }
@@ -193,7 +195,7 @@ const reverseArray = function(inputArray){
 const selectNthNumber = function(array,index){
   return index%2 != 0;
 }
- 
+
 const select2ndNumberInArray = function(numbersArray){
   return numbersArray.filter(selectNthNumber);
 }

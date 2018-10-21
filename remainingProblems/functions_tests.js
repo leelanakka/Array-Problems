@@ -113,6 +113,7 @@ assert.deepEqual(extractDigits(1),[1]);
 assert.deepEqual(extractDigits(12),[1,2]);
 assert.deepEqual(extractDigits(00),[0]);
 assert.deepEqual(extractDigits(20345),[2,0,3,4,5]);
+assert.deepEqual(extractDigits("20345abc"),[2,0,3,4,5]);
 
 // If the user gives you an input array it should return with an unique array
 assert.deepEqual(findUniqueArray([1,2]),[1,2]);
