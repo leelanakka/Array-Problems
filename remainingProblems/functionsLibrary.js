@@ -43,20 +43,19 @@ const findDifference = function(array1,array2) {
   uniqueArray2 = findUniqueArray(array2)
   for(let number of uniqueArray1){
     if(!uniqueArray2.includes(number)){
-      outputArray.push(number)
+      outputArray.push(number);
     }
   }
   return outputArray;
 }
 
-
 const findIntersection = function(array1,array2){
   let outputArray = [];
   uniqueArray1 = findUniqueArray(array1);
-  uniqueArray2 = findUniqueArray(array2)
+  uniqueArray2 = findUniqueArray(array2);
   for(let number of uniqueArray1){
     if(uniqueArray2.includes(number)){
-      outputArray.push(number)
+      outputArray.push(number);
     }
   }
   return outputArray;
@@ -75,7 +74,7 @@ const findUniqueArray = function(inputArray){
 
 const findUnionArray = function(array1,array2){
   let uniqueArray1 = findUniqueArray(array1);
-  let uniqueArray2 = findUniqueArray(array2)
+  let uniqueArray2 = findUniqueArray(array2);
   unionArray = uniqueArray1.concat(uniqueArray2);
   return findUniqueArray(unionArray);
 }
@@ -176,18 +175,27 @@ const findLowestNumber = function(numbersArray){
   return numbersArray.reduce(lowestNumber);
 }
 
-const findGreatestNumber = function(numbersArray){
-  const greatestNumber = function(num1,num2) {
-    if(num1>num2){
-      return num1;
-    }
-    return num2;
+const greatestNumber = function(num1,num2) {
+  if(num1>num2){
+    return num1;
   }
+  return num2;
+}
+
+const findGreatestNumber = function(numbersArray){
   return numbersArray.reduce(greatestNumber);
 }
 
 const reverseArray = function(inputArray){
   return inputArray.reverse();
+}
+
+const selectNthNumber = function(array,index){
+  return index%2 != 0;
+}
+ 
+const select2ndNumberInArray = function(numbersArray){
+  return numbersArray.filter(selectNthNumber);
 }
 
 const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
@@ -207,7 +215,7 @@ const generateReverseFibonacci = function(limit){
   let reverseFibonacci = [];
   reverseFibonacci.unshift(first);
   if(limit<0){
-    return "please enter positive integer"
+    return "please enter positive integer";
   }
   if(limit == 1){
     return reverseFibonacci;
@@ -220,8 +228,6 @@ const generateReverseFibonacci = function(limit){
   return generateFibonacci(remainingNoOfSeries,first,second,reverseFibonacci);
 }
 
-
-
 const insertElementsZip = function(arrayA,arrayB){
   let finalArray = [];
   let count = arrayA.length;
@@ -229,7 +235,7 @@ const insertElementsZip = function(arrayA,arrayB){
     count = arrayB.length;
   }
   for(let index=0; index < count ; index++){
-    finalArray.push([arrayA[index],arrayB[index]])
+    finalArray.push([arrayA[index],arrayB[index]]);
   }
   return finalArray;
 }
@@ -257,3 +263,4 @@ exports.filterEvenNumbers = filterEvenNumbers;
 exports.filterOddNumbers = filterOddNumbers;
 exports.findSumOfArray = findSumOfArray;
 exports.reverseArray = reverseArray;
+exports.select2ndNumberInArray = select2ndNumberInArray;

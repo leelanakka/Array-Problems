@@ -22,7 +22,8 @@ const{
   filterEvenNumbers,
   filterOddNumbers,
   findSumOfArray,
-  reverseArray} = require('./functionsLibrary.js');
+  reverseArray,
+  select2ndNumberInArray} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
@@ -78,9 +79,9 @@ assert.deepEqual(filterEvenNumbers([4,2]),[4,2]);
 assert.deepEqual(filterEvenNumbers([2,3,4,5,6]),[2,4,6]);
 
 //if the user gives the input as array of the numbers then it should return the array of odd numbers.
-assert.deepEqual(filterOddNumbers([1,2,3]),[1,3])
-assert.deepEqual(filterOddNumbers([11,22,23,34]),[11,23])
-assert.deepEqual(filterOddNumbers([11,22,23,34]),[11,23])
+assert.deepEqual(filterOddNumbers([1,2,3]),[1,3]);
+assert.deepEqual(filterOddNumbers([11,22,23,34]),[11,23]);
+assert.deepEqual(filterOddNumbers([11,22,23,34]),[11,23]);
 
 // if the user gives you the array of numbers it should return the count of the even numbers present in it.
 assert.equal(countEvenNumbers([2]),1);
@@ -136,11 +137,11 @@ assert.deepEqual(findIntersection([1,1],[2,2]),[]);
 assert.deepEqual(findIntersection([1,2],[1,2,3]),[1,2]);
 
 // if the user gives input of two arrays then it should return the the elements that are not present in the second array but present in the first array
-assert.deepEqual(findDifference([1],[1]),[])
-assert.deepEqual(findDifference([1],[2]),[1])
-assert.deepEqual(findDifference([1,2],[2]),[1])
-assert.deepEqual(findDifference([1,2],[]),[1,2])
-assert.deepEqual(findDifference([1,2,1,2],[3,4,2,2,2]),[1])
+assert.deepEqual(findDifference([1],[1]),[]);
+assert.deepEqual(findDifference([1],[2]),[1]);
+assert.deepEqual(findDifference([1,2],[2]),[1]);
+assert.deepEqual(findDifference([1,2],[]),[1,2]);
+assert.deepEqual(findDifference([1,2,1,2],[3,4,2,2,2]),[1]);
 
 // if the user gives the two arrays of numbers it should return the bullion value for whether the array 1 is proper subset of array 2 or not 
 assert.equal(isSubset([1],[1]),true);
@@ -149,19 +150,28 @@ assert.equal(isSubset([1,1,1],[2,1,1]),true);
 assert.equal(isSubset([1,1,2,3],[2,1,1,3,4,5,2,3,1,4]),true);
 
 // if the user gives one array of numbers and an position value to rotate it should rotate as per teh position 
-assert.deepEqual(rotateArray([1,2],1),[2,1])
-assert.deepEqual(rotateArray([1,2,3,4,5],2),[3,4,5,1,2])
-assert.deepEqual(rotateArray([1,2,3,4,5],4),[5,1,2,3,4])
-assert.deepEqual(rotateArray([1,2,3,4,5],0),[1,2,3,4,5])
+assert.deepEqual(rotateArray([1,2],1),[2,1]);
+assert.deepEqual(rotateArray([1,2,3,4,5],2),[3,4,5,1,2]);
+assert.deepEqual(rotateArray([1,2,3,4,5],4),[5,1,2,3,4]);
+assert.deepEqual(rotateArray([1,2,3,4,5],0),[1,2,3,4,5]);
 
 // if the user gives an array of numbers and limit then it will seperate two arrays of the numbers
-assert.deepEqual(partitionOfArray([1,2],1),[[1],[2]])
-assert.deepEqual(partitionOfArray([1,2,7,4,9,10,5],5),[[1,2,4,5], [7,9,10]])
-assert.deepEqual(partitionOfArray([1,2,3,4,1,2,3,4,9,10,1,2],5),[[1,2,3,4,1,2,3,4,1,2],[9,10]])
-assert.deepEqual(partitionOfArray([1,2],3),[[1,2],[]])
+assert.deepEqual(partitionOfArray([1,2],1),[[1],[2]]);
+assert.deepEqual(partitionOfArray([1,2,7,4,9,10,5],5),[[1,2,4,5], [7,9,10]]);
+assert.deepEqual(partitionOfArray([1,2,3,4,1,2,3,4,9,10,1,2],5),[[1,2,3,4,1,2,3,4,1,2],[9,10]]);
+assert.deepEqual(partitionOfArray([1,2],3),[[1,2],[]]);
 
 // if the user gives an array of numbers it should return the reverse array of numbers.
 assert.deepEqual(reverseArray([0]),[0]);
 assert.deepEqual(reverseArray([1,2]),[2,1]);
 assert.deepEqual(reverseArray([4,2]),[2,4]);
 assert.deepEqual(reverseArray([2,3,4,5,6]),[6,5,4,3,2]);
+
+// if the user gives an array of numbers then it will return the every 2nd element in that array
+assert.deepEqual(select2ndNumberInArray([0]),[]);
+assert.deepEqual(select2ndNumberInArray([1,2]),[2]);
+assert.deepEqual(select2ndNumberInArray([4,2]),[2]);
+assert.deepEqual(select2ndNumberInArray([2,3,4,5,6]),[3,5]);
+assert.deepEqual(select2ndNumberInArray([10,9,3,22,100]),[9,22]);
+assert.deepEqual(select2ndNumberInArray([22,44,-21,33]),[44,33]);
+assert.deepEqual(select2ndNumberInArray([-1,-33,-39,-100,-21]),[-33,-100]);
