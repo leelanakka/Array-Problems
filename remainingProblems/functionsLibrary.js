@@ -1,3 +1,9 @@
+const compliment = function(functionToCompliment){
+  return function(arguements){
+    return !functionToCompliment(arguements);
+  }
+}
+
 const partitionOfArray = function(numbersArray,limit){
   let array1 = [];
   let array2 = [];
@@ -6,7 +12,7 @@ const partitionOfArray = function(numbersArray,limit){
       array1.push(numbersArray[index]);
     } else{
       array2.push(numbersArray[index]);
-       }
+    }
   }
   return [array1,array2];
 }
@@ -128,9 +134,7 @@ const filterEvenNumbers = function(numbersArray){
   return numbersArray.filter(isEven);
 }
 
-const isOdd = function(number) {
-  return number%2 != 0;
-}
+const isOdd = compliment(isEven);
 
 const filterOddNumbers = function(numbersArray){
   return numbersArray.filter(isOdd);
@@ -172,6 +176,16 @@ const findLowestNumber = function(numbersArray){
   return numbersArray.reduce(lowestNumber);
 }
 
+const findGreatestNumber = function(numbersArray){
+  const greatestNumber = function(num1,num2) {
+    if(num1>num2){
+      return num1;
+    }
+    return num2;
+  }
+  return numbersArray.reduce(greatestNumber);
+}
+
 const reverseArray = function(inputArray){
   return inputArray.reverse();
 }
@@ -206,15 +220,7 @@ const generateReverseFibonacci = function(limit){
   return generateFibonacci(remainingNoOfSeries,first,second,reverseFibonacci);
 }
 
-const findGreatestNumber = function(numbersArray){
-  const greatestNumber = function(num1,num2) {
-    if(num1>num2){
-      return num1;
-    }
-    return num2;
-  }
-  return numbersArray.reduce(greatestNumber);
-}
+
 
 const insertElementsZip = function(arrayA,arrayB){
   let finalArray = [];
