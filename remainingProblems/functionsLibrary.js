@@ -90,174 +90,155 @@ const extractDigits = function(numberToExtract){
   return digitsArray;
 }
 
+const returnSameInput = function(number){
+  return number;
+}
+
 const findIndexOfNumber = function(numbersArray,number){
-  let position = 0;
-  for(let index = 0; index < numbersArray.length ; index++){
-    if(numbersArray[index] == number){
-      position = index;
-      return position;
-    }
-  }
-  return ""; 
+  return numbersArray.indexOf(returnSameInput(number)); 
 }
 
 const ascending = function(state,number){
   let {element,decision} = state;
-  if(element>number && decision == true){
-    decision = false;
-  }
+  decision = (element>number && decision == true)?false:decision;
   return {element:number, decision:decision};
 }
 
 const isArrayDescending = function(numbersArray){
   reversedArray = numbersArray.reverse();
   return reversedArray.reduce(ascending,{element:reversedArray[0],decision:true}).decision;
+}
+
+const isArrayAscending = function(numbersArray){
+  return numbersArray.reduce(ascending,{element:numbersArray[0],decision:true}).decision;
+}
+
+const isEven = function(number) {
+  return number%2 == 0;
+}
+
+const countEvenNumbers = function(numbersArray){
+  return numbersArray.filter(isEven).length;
+}
+
+const filterEvenNumbers = function(numbersArray){
+  return numbersArray.filter(isEven);
+}
+
+const isOdd = compliment(isEven);
+
+const filterOddNumbers = function(numbersArray){
+  return numbersArray.filter(isOdd);
+}
+
+const countOddNumbers = function(numbersArray){
+  return numbersArray.filter(isOdd).length;
+}
+
+const findLengthOfString = function(string){
+  return string.length;
+}
+
+const mappingLengthsOfWords = function(array){
+  return array.map(findLengthOfString);
+}
+
+const findSum = function(num1,num2) {
+  return num1+num2;
+}
+
+const findSumOfArray = function(numbersArray){
+  return numbersArray.reduce(findSum);
+}
+
+const findingAverageOfArray = function(numbersArray){
+  let length = numbersArray.length;
+  return numbersArray.reduce(findSum)/length;
+}
+
+const findLowestNumber = function(numbersArray){
+  return Math.min.apply(0,numbersArray);
+}
+
+const findGreatestNumber = function(numbersArray){
+  return Math.max.apply(0,numbersArray);
+}
+
+const reverseArray = function(inputArray){
+  return inputArray.reverse();
+}
+
+const selectNthNumber = function(array,index){
+  return index%2 != 0;
+}
+
+const select2ndNumberInArray = function(numbersArray){
+  return numbersArray.filter(selectNthNumber);
+}
+
+const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
+  for(let index=1; index<=remainingNoOfSeries; index++){
+    fibonacciNumber=first+second;
+    first=second;
+    second=fibonacciNumber;
+    reverseFibonacci.unshift(fibonacciNumber);
   }
+  return reverseFibonacci;
+}
 
-    const isArrayAscending = function(numbersArray){
-      return numbersArray.reduce(ascending,{element:numbersArray[0],decision:true}).decision;
-    }
+const generateReverseFibonacci = function(limit){
+  let first=0;
+  let second=1;
+  let fibonacciNumber=0;
+  let reverseFibonacci = [];
+  reverseFibonacci.unshift(first);
+  if(limit<0){
+    return "please enter positive integer";
+  }
+  if(limit == 1){
+    return reverseFibonacci;
+  }
+  reverseFibonacci.unshift(second);
+  if(limit == 2){
+    return reverseFibonacci;
+  }
+  let remainingNoOfSeries=limit-2;
+  return generateFibonacci(remainingNoOfSeries,first,second,reverseFibonacci);
+}
 
-    const isEven = function(number) {
-      return number%2 == 0;
-    }
+const insertElementsZip = function(arrayA,arrayB){
+  let finalArray = [];
+  let count = arrayA.length;
+  if(count>arrayB.length){
+    count = arrayB.length;
+  }
+  for(let index=0; index < count ; index++){
+    finalArray.push([arrayA[index],arrayB[index]]);
+  }
+  return finalArray;
+}
 
-    const countEvenNumbers = function(numbersArray){
-      return numbersArray.filter(isEven).length;
-    }
-
-    const filterEvenNumbers = function(numbersArray){
-      return numbersArray.filter(isEven);
-    }
-
-    const isOdd = compliment(isEven);
-
-    const filterOddNumbers = function(numbersArray){
-      return numbersArray.filter(isOdd);
-    }
-
-    const countOddNumbers = function(numbersArray){
-      return numbersArray.filter(isOdd).length;
-    }
-
-    const findLengthOfString = function(string){
-      return string.length;
-    }
-
-    const mappingLengthsOfWords = function(array){
-      return array.map(findLengthOfString);
-    }
-
-    const findSum = function(num1,num2) {
-      return num1+num2;
-    }
-
-    const findSumOfArray = function(numbersArray){
-      return numbersArray.reduce(findSum);
-    }
-
-    const findingAverageOfArray = function(numbersArray){
-      let length = numbersArray.length;
-      return numbersArray.reduce(findSum)/length;
-    }
-
-    const lowestNumber = function(num1,num2) {
-      if(num1<num2){
-        return num1;
-      }
-      return num2;
-    }
-
-    const findLowestNumber = function(numbersArray){
-      return numbersArray.reduce(lowestNumber);
-    }
-
-    const greatestNumber = function(num1,num2) {
-      if(num1>num2){
-        return num1;
-      }
-      return num2;
-    }
-
-    const findGreatestNumber = function(numbersArray){
-      return numbersArray.reduce(greatestNumber);
-    }
-
-    const reverseArray = function(inputArray){
-      return inputArray.reverse();
-    }
-
-    const selectNthNumber = function(array,index){
-      return index%2 != 0;
-    }
-
-    const select2ndNumberInArray = function(numbersArray){
-      return numbersArray.filter(selectNthNumber);
-    }
-
-    const generateFibonacci = function(remainingNoOfSeries,first,second,reverseFibonacci){
-      for(let index=1; index<=remainingNoOfSeries; index++){
-        fibonacciNumber=first+second;
-        first=second;
-        second=fibonacciNumber;
-        reverseFibonacci.unshift(fibonacciNumber);
-      }
-      return reverseFibonacci;
-    }
-
-    const generateReverseFibonacci = function(limit){
-      let first=0;
-      let second=1;
-      let fibonacciNumber=0;
-      let reverseFibonacci = [];
-      reverseFibonacci.unshift(first);
-      if(limit<0){
-        return "please enter positive integer";
-      }
-      if(limit == 1){
-        return reverseFibonacci;
-      }
-      reverseFibonacci.unshift(second);
-      if(limit == 2){
-        return reverseFibonacci;
-      }
-      let remainingNoOfSeries=limit-2;
-      return generateFibonacci(remainingNoOfSeries,first,second,reverseFibonacci);
-    }
-
-    const insertElementsZip = function(arrayA,arrayB){
-      let finalArray = [];
-      let count = arrayA.length;
-      if(count>arrayB.length){
-        count = arrayB.length;
-      }
-      for(let index=0; index < count ; index++){
-        finalArray.push([arrayA[index],arrayB[index]]);
-      }
-      return finalArray;
-    }
-
-    exports.insertElementsZip = insertElementsZip;
-    exports.generateReverseFibonacci = generateReverseFibonacci;
-    exports.greatestNumber = findGreatestNumber;
-    exports.lowestNumber = findLowestNumber;
-    exports.averageOfArray = findingAverageOfArray;
-    exports.mappingLength = mappingLengthsOfWords;
-    exports.countOddNumbers = countOddNumbers;
-    exports.countEvenNumbers = countEvenNumbers;
-    exports.findIndexOfNumber = findIndexOfNumber;
-    exports.isArrayAscending = isArrayAscending;
-    exports.isArrayDescending = isArrayDescending;
-    exports.extractDigits = extractDigits;
-    exports.findUniqueArray = findUniqueArray;
-    exports.findUnionArray = findUnionArray
-    exports.findIntersection = findIntersection;
-    exports.findDifference = findDifference;
-    exports.isSubset = isSubset;
-    exports.rotateArray = rotateArray;
-    exports.partitionOfArray = partitionOfArray;
-    exports.filterEvenNumbers = filterEvenNumbers;
-    exports.filterOddNumbers = filterOddNumbers;
-    exports.findSumOfArray = findSumOfArray;
-    exports.reverseArray = reverseArray;
-    exports.select2ndNumberInArray = select2ndNumberInArray;
+exports.insertElementsZip = insertElementsZip;
+exports.generateReverseFibonacci = generateReverseFibonacci;
+exports.greatestNumber = findGreatestNumber;
+exports.lowestNumber = findLowestNumber;
+exports.averageOfArray = findingAverageOfArray;
+exports.mappingLength = mappingLengthsOfWords;
+exports.countOddNumbers = countOddNumbers;
+exports.countEvenNumbers = countEvenNumbers;
+exports.findIndexOfNumber = findIndexOfNumber;
+exports.isArrayAscending = isArrayAscending;
+exports.isArrayDescending = isArrayDescending;
+exports.extractDigits = extractDigits;
+exports.findUniqueArray = findUniqueArray;
+exports.findUnionArray = findUnionArray
+exports.findIntersection = findIntersection;
+exports.findDifference = findDifference;
+exports.isSubset = isSubset;
+exports.rotateArray = rotateArray;
+exports.partitionOfArray = partitionOfArray;
+exports.filterEvenNumbers = filterEvenNumbers;
+exports.filterOddNumbers = filterOddNumbers;
+exports.findSumOfArray = findSumOfArray;
+exports.reverseArray = reverseArray;
+exports.select2ndNumberInArray = select2ndNumberInArray;
