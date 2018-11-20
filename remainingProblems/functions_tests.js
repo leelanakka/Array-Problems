@@ -23,7 +23,8 @@ const{
   filterOddNumbers,
   findSumOfArray,
   reverseArray,
-  select2ndNumberInArray} = require('./functionsLibrary.js');
+  select2ndNumberInArray
+} = require('./functionsLibrary.js');
 
 // if I give two arrays of two elements each it should return with two arrays of two elements each.
 assert.deepEqual(insertElementsZip([1,2],[3,4]),[[1,3],[2,4]]);
